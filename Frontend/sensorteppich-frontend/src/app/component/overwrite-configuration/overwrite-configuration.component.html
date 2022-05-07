@@ -1,0 +1,29 @@
+<div id="master-div" [ngStyle]="styleMaster()">
+    <div id="background-div">
+        <div class="head-section">
+            <h2>Configure Group</h2>
+            <div class="line"></div>
+            <p>{{groupname}}</p>
+            <button id="help-button" mat-mini-fab (click)="helpButtonClicked()">
+                <mat-icon>?</mat-icon>
+            </button>
+            <h3>Please choose the group configuration to copy.</h3>
+        </div>
+        <div id="content">
+            <mat-form-field appearance="fill">
+                <mat-label>Group</mat-label>
+                <mat-select [(value)]="selected">
+                    <mat-option>None</mat-option>
+                    <mat-option *ngFor="let group of groupList" value={{group}}>{{group}}</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <p>You selected: {{selected}}</p>
+            <button mat-flat-button id="overwrite-button" (click)="openDialog()">
+                <span>Overwrite</span>
+            </button>
+            <button mat-flat-button id="cancel-button" (click)="cancelAction()">
+                <span>Back</span>
+            </button>
+        </div>
+    </div>
+</div>

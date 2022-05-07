@@ -1,0 +1,55 @@
+<div id="master-div" [ngStyle]="styleMaster()">
+    <div id="background-div">
+        <div class="head-section">
+            <h2>Settings</h2>
+            <div class="line"></div>
+            <p>User: {{this.openapeservice.getLoggedInUser()}}</p>
+        </div>
+        <div id="openape-settings">
+            <div id="font-size-div">
+                <p>Fontsize</p>
+                <div id="fontsize-checkboxes-div">
+                    <!-- <mat-radio-group [(ngModel)]="fontsize">
+                    <mat-radio-button class="fontsize-button" value="x-small">Smaller</mat-radio-button>
+                    <mat-radio-button class="fontsize-button" value="small">Small</mat-radio-button>
+                    <mat-radio-button class="fontsize-button" value="medium">Normal</mat-radio-button>
+                    <mat-radio-button class="fontsize-button" value="large">Large</mat-radio-button>
+                    <mat-radio-button class="fontsize-button" value="x-large">Larger</mat-radio-button>
+                </mat-radio-group> -->
+                    <mat-button-toggle-group [(ngModel)]="fontsize" aria-label="Font Size"
+                        (change)="fontSizeClicked(fontsize)">
+                        <mat-button-toggle class="fontsize-button" value="x-small">Smaller</mat-button-toggle>
+                        <mat-button-toggle class="fontsize-button" value="small">Small</mat-button-toggle>
+                        <mat-button-toggle class="fontsize-button" value="medium">Normal</mat-button-toggle>
+                        <mat-button-toggle class="fontsize-button" value="large">Large</mat-button-toggle>
+                        <mat-button-toggle class="fontsize-button" value="x-large">Larger</mat-button-toggle>
+                    </mat-button-toggle-group>
+                </div>
+            </div>
+            <div id="nightmode-div">
+                <p>Dark mode</p>
+                <div id="nightmode-slider-div">
+                    <mat-slide-toggle #NightmodeSlider (change)="nightModeSliderClicked(NightmodeSlider.checked)"
+                        [checked]="activateNightmode">Active
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div id="helpui-div">
+                <p>Helpbuttons</p>
+                <div id="helpui-slider-div">
+                    <mat-slide-toggle #HelpUISlider (change)="helpUISliderClicked(HelpUISlider.checked)"
+                        [checked]="activateHelpUI">Active
+                    </mat-slide-toggle>
+                </div>
+            </div>
+            <div id="footer-div">
+                <button mat-flat-button id="save-button" (click)="saveOpenAPEChanges()">
+                    <span>Save</span>
+                </button>
+                <button mat-flat-button id="cancel-button" (click)="cancelChanges()">
+                    <span>Cancel</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

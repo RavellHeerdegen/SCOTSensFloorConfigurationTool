@@ -1,0 +1,33 @@
+plugins {
+    id 'org.springframework.boot' version '2.2.2.RELEASE'
+    id 'io.spring.dependency-management' version '1.0.8.RELEASE'
+    id 'java'
+    id 'application'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.json:json:20160212'
+	implementation 'org.eclipse.californium:californium-core:2.0.0-M5'
+	implementation 'org.eclipse.californium:scandium:2.0.0-M5'
+	implementation 'org.json:org.json:chargebee-1.0'
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'com.h2database:h2'
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+    }
+    compileOnly("org.springframework.boot:spring-boot-devtools")
+    // Only the database driver needed has to be added here. Do not forget to configure it in the application.properties, too
+    //runtime 'mysql:mysql-connector-java'
+    runtime 'org.mariadb.jdbc:mariadb-java-client'
+}
+
+mainClassName = 'app.Application'

@@ -1,0 +1,47 @@
+app/API_Controller.java
+ app.API_Controller
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/IPluginObserver.java
+ de.ableitner.barrierfreeSmarthome.common.plugin.IPluginObserver
+Models/PluginParams.java
+ Models.PluginParams
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/DefaultPluginLoader.java
+ de.ableitner.barrierfreeSmarthome.common.plugin.DefaultPluginLoader
+Common/de/ableitner/barrierfreeSmarthome/common/EmptyClass.java
+ de.ableitner.barrierfreeSmarthome.common.EmptyClass
+plugins/PhilipsHuePlugin.java
+ plugins.PhilipsHuePlugin
+app/Field.java
+ app.Field
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/IPlugin.java
+ de.ableitner.barrierfreeSmarthome.common.plugin.IPlugin
+Models/Configuration.java
+ Models.Configuration
+app/MockDatabase.java
+ app.MockDatabase
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/PluginApiVersionEnum.java
+ de.ableitner.barrierfreeSmarthome.common.plugin.PluginApiVersionEnum
+Models/PluginConfig.java
+ Models.PluginConfig
+Common/de/ableitner/barrierfreeSmarthome/common/Checker.java
+ de.ableitner.barrierfreeSmarthome.common.Checker
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/AbstractPlugin.java
+ de.ableitner.barrierfreeSmarthome.common.plugin.AbstractPlugin
+app/CarpetConnector.java
+ app.CarpetConnector
+Common/de/ableitner/barrierfreeSmarthome/common/SharedAttribute.java
+ de.ableitner.barrierfreeSmarthome.common.SharedAttribute
+app/Application.java
+ app.Application
+ app.ApplicationStartup
+Common/de/ableitner/barrierfreeSmarthome/common/IHttpClient.java
+ de.ableitner.barrierfreeSmarthome.common.IHttpClient
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/IPluginV1.java
+ de.ableitner.barrierfreeSmarthome.common.plugin.IPluginV1
+Common/de/ableitner/barrierfreeSmarthome/common/BarrierfreeSmarthomeException.java
+ de.ableitner.barrierfreeSmarthome.common.BarrierfreeSmarthomeException
+app/FieldList.java
+ app.FieldList
+app/View.java
+ app.services.PluginService
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/AbstractHttpClientPlugin.java
+ de.ableitner.barrierfreeSmarthome.common.plugin.AbstractHttpClientPlugin

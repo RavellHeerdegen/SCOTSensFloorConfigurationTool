@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="barrier_free_smarthome:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/barrier_free_smarthome_jar</output-path>
+    <root id="archive" name="barrier_free_smarthome.jar">
+      <element id="module-output" name="barrier_free_smarthome.main" />
+      <element id="library" level="project" name="Gradle: com.fasterxml:classmate:1.5.1" />
+      <element id="library" level="project" name="Gradle: ch.qos.logback:logback-core:1.2.3" />
+      <element id="library" level="project" name="Gradle: ch.qos.logback:logback-classic:1.2.3" />
+      <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-annotations:2.10.1" />
+      <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-core:2.10.1" />
+      <element id="library" level="project" name="Gradle: com.fasterxml.jackson.core:jackson-databind:2.10.1" />
+      <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jdk8:2.10.1" />
+      <element id="library" level="project" name="Gradle: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.10.1" />
+    </root>
+  </artifact>
+</component>

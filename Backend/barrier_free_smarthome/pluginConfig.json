@@ -1,0 +1,47 @@
+{
+  "carpetConnectorIP": "192.168.178.22",
+  "plugins": [
+    {
+      "pluginId": "hue_light",
+      "ip": "192.168.178.23",
+      "port": "",
+      "pluginEntryPointClassPath":"plugins.philipsHue.PhilipsHuePlugin",
+      "auth": "ekwDPgrvZglEfVxOzIFklqa5Zp9WoZfDFXXqM1BL",
+      "objects": [{"id": 13,"name": "front_right"},{"id": 14,"name": "rechts_vom_Spiegel"},{"id": 15,"name": "ka"},{"id": 16,"name": "ganz_hinten_links"}]
+    },
+    {
+    "pluginId": "tradfri_light",
+    "gateway_ip":  "192.168.178.133",
+    "gateway_identity": "testpuxlabuser",
+    "gateway_secret":"Pal0Vs0ccC8icyc9",
+    "pluginEntryPointClassPath":"plugins.tradfri.TradfriPlugin",
+    "objects": [{"id": 65541,"name": "Multicolor Bulb"}]
+    },
+    {
+      "pluginId": "woehlke",
+      "pluginEntryPointClassPath":"de.ableitner.woehlkePlugin.WoehlkePlugin",
+      "pluginFilePath": "src/main/java/plugins/woehlkePlugin/WoehlkePluginV0.1.jar",
+      "ip":"192.168.178.153",
+      "objects": [{"id": 1,"name": "my_Steckdose"}]
+    },
+    {
+      "pluginId": "vlc",
+      "pluginEntryPointClassPath":"de.ableitner.vlcPlugin.VlcPlugin",
+      "pluginFilePath": "src/main/java/plugins/VlcPlugin/VlcPluginV0.2.jar",
+      "password": "admin",
+      "ip":"localhost",
+      "port": "8080",
+      "volume": "70",
+      "mute": "true",
+      "fullscreen": "true",
+      "radio/lastPlayedPlaylistItemId": "3",
+      "radio/minPlaylistItemId": "0",
+      "radio/maxPlaylistItemId": "10",
+      "tv/lastPlayedPlaylistItemId": "0",
+      "tv/minPlaylistItemId": "0",
+      "tv/maxPlaylistItemId": "4",
+
+      "objects": [{"id": 1,"name": "my_vlc_player"}]
+    }
+  ]
+}

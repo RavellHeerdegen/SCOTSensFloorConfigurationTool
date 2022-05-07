@@ -1,0 +1,106 @@
+<div id="master-div" *ngIf="this.isLoading == false && this.openapeservice.preferencesApplied; else spinner"
+    [ngStyle]="styleMaster()">
+    <div id="background-div">
+        <div class="head-section">
+            <h2>Configure Sensorfloor</h2>
+            <div class="line"></div>
+            <p>User: {{this.openapeservice.getLoggedInUser()}}</p>
+            <button id="change-user-button" mat-flat-button (click)="changeUser()">Change user</button>
+            <button id="help-button" mat-mini-fab *ngIf="this.openapeservice.helpButtonActive == true"
+                (click)="helpButtonClicked()">
+                <mat-icon>?</mat-icon>
+            </button>
+            <button id="settings-button" mat-mini-fab (click)="navigateToOpenAPESettings()">
+                <mat-icon>settings</mat-icon>
+            </button>
+        </div>
+        <div class="content">
+            <div id="tiles-div">
+                <div style="display: flex; flex-direction: row;">
+                    <button (click)="tileClicked(number)"
+                        [ngClass]="tileStyle(tiles[number], tiles[number].getFrontendGroupid())"
+                        [disabled]="tiles[number].getDisabled()" *ngFor="let number of numbers0; index as i">
+                        <span *ngIf="tiles[number].getGrouped()">{{tiles[number].getGroupNameShort()}}</span>
+                    </button>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <button (click)="tileClicked(number)"
+                        [ngClass]="tileStyle(tiles[number], tiles[number].getFrontendGroupid())"
+                        [disabled]="tiles[number].getDisabled()" *ngFor="let number of numbers1; index as i">
+                        <span *ngIf="tiles[number].getGrouped()">{{tiles[number].getGroupNameShort()}}</span>
+                    </button>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <button (click)="tileClicked(number)"
+                        [ngClass]="tileStyle(tiles[number], tiles[number].getFrontendGroupid())"
+                        [disabled]="tiles[number].getDisabled()" *ngFor="let number of numbers2; index as i">
+                        <span *ngIf="tiles[number].getGrouped()">{{tiles[number].getGroupNameShort()}}</span>
+                    </button>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <button (click)="tileClicked(number)"
+                        [ngClass]="tileStyle(tiles[number], tiles[number].getFrontendGroupid())"
+                        [disabled]="tiles[number].getDisabled()" *ngFor="let number of numbers3; index as i">
+                        <span *ngIf="tiles[number].getGrouped()">{{tiles[number].getGroupNameShort()}}</span>
+                    </button>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <button (click)="tileClicked(number)"
+                        [ngClass]="tileStyle(tiles[number], tiles[number].getFrontendGroupid())"
+                        [disabled]="tiles[number].getDisabled()" *ngFor="let number of numbers4; index as i">
+                        <span *ngIf="tiles[number].getGrouped()">{{tiles[number].getGroupNameShort()}}</span>
+                    </button>
+                </div>
+                <div style="display: flex; flex-direction: row;">
+                    <button (click)="tileClicked(number)"
+                        [ngClass]="tileStyle(tiles[number], tiles[number].getFrontendGroupid())"
+                        [disabled]="tiles[number].getDisabled()" *ngFor="let number of numbers5; index as i">
+                        <span *ngIf="tiles[number].getGrouped()">{{tiles[number].getGroupNameShort()}}</span>
+                    </button>
+                </div>
+                <div style="display: flex; flex-direction: row; align-items: center; justify-content: center;">
+                    <button (click)="tileClicked(number)"
+                        [ngClass]="tileStyle(tiles[number], tiles[number].getFrontendGroupid())" class="matte-tile"
+                        [disabled]="tiles[number].getDisabled()" *ngFor="let number of numbers6; index as i">
+                        <span *ngIf="tiles[number].getGrouped()">{{tiles[number].getGroupNameShort()}}</span>
+                    </button>
+                </div>
+            </div>
+            <div class="infoandbuttons">
+                <div id="functions-div">
+                    <button mat-flat-button class="functions-buttons" id="createnewgroup-button"
+                        (click)="createNewGroup()" *ngIf="selectedtiles.length != 0 && this.groupSelected != true">
+                        Create new group
+                    </button>
+                    <button mat-flat-button class="functions-buttons" id="edit-button" (click)="editTiles()"
+                        *ngIf="selectedtiles.length != 0 && this.groupSelected == true && !this.editModeActive">
+                        Edit tiles
+                    </button>
+                    <button mat-flat-button class="functions-buttons" id="save-button" (click)="saveEditing()"
+                        *ngIf="this.editModeActive">
+                        Save
+                    </button>
+                    <button mat-flat-button class="functions-buttons" id="cancel-button" (click)="abortEditing()"
+                        *ngIf="this.editModeActive">
+                        Cancel
+                    </button>
+                    <button mat-flat-button class="functions-buttons" id="configure-button" (click)="configureGroup()"
+                        *ngIf="selectedtiles.length != 0 && this.groupSelected == true && !this.editModeActive">
+                        Configure
+                    </button>
+                    <button mat-flat-button class="functions-buttons" id="delete-button"
+                        (click)="startDeleteConfirmationDialog()"
+                        *ngIf="selectedtiles.length != 0 && this.groupSelected == true && !this.editModeActive">
+                        Delete group
+                    </button>
+                </div>
+                <div class="group-info-div" *ngIf="selectedTileGroupName != ''">
+                    <h3>Selected group: {{selectedTileGroupName}}</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #spinner>
+    <mat-spinner></mat-spinner>
+</ng-template>

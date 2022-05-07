@@ -1,0 +1,74 @@
+<div id="master-div" [ngStyle]="styleMaster()">
+    <div id="background-div">
+        <div class="head-section">
+            <h2>Configure Group</h2>
+            <div class="line"></div>
+            <p>{{groupname}}</p>
+            <button id="help-button" mat-mini-fab (click)="helpButtonClicked()">
+                <mat-icon>?</mat-icon>
+            </button>
+            <h3>Step 3: Configure {{pluginname}}.</h3>
+            <p>{{stepon ? "On Entry: " + objectname : "On Exit: " + objectname}}</p>
+        </div>
+
+        <div id="params-div">
+            <ng-container *ngIf="plugintype == 'light'">
+                <!-- Load light configuration screen -->
+                <div id="light-configuration-div">
+                    <mat-slide-toggle #turnonslider (change)="turnOnSliderClicked(turnonslider.checked)"
+                        [checked]="turnonsliderOn">Turn on
+                    </mat-slide-toggle>
+                    <p id="brightness-label">Brightness value: {{brightnessslidervalue}}</p>
+                    <mat-slider id="brightness-slider" #brightnessslider [tickInterval]="25" [min]="0" [max]="255"
+                        [step]="1" [value]="180" (input)="brightnessSliderValueChanged(brightnessslider.value)">
+                    </mat-slider>
+                    <span id="color-span">Color: {{chosencolor}}</span>
+                    <div id="color-buttons-div">
+                        <button [ngClass]="buttonStyle('red')" (click)="colorButtonClicked('red')">R</button>
+                        <button [ngClass]="buttonStyle('yellow')" (click)="colorButtonClicked('yellow')">Y</button>
+                        <button [ngClass]="buttonStyle('green')" (click)="colorButtonClicked('green')">G</button>
+                        <button [ngClass]="buttonStyle('blue')" (click)="colorButtonClicked('blue')">B</button>
+                        <button [ngClass]="buttonStyle('white')" (click)="colorButtonClicked('white')">W</button>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="plugintype == 'socket'">
+                <mat-slide-toggle #turnonslider (change)="turnOnSliderClicked(turnonslider.checked)"
+                    [(ngModel)]="turnonsliderOn">Turn on
+                </mat-slide-toggle>
+                <p id="socket-label">Socket: {{selectedSocketId}}</p>
+                <div id="socket-buttons">
+                    <button mat-fab color="primary" id="first-socket-button"
+                        [ngClass]="{'socket-button': selectedSocketId != 1, 'clicked-socket-button': selectedSocketId == 1}"
+                        (click)="changeSocketValue(1)">
+                        <span>1</span>
+                    </button>
+                    <button mat-fab color="primary" id="second-socket-button"
+                        [ngClass]="{'socket-button': selectedSocketId != 2, 'clicked-socket-button': selectedSocketId == 2}"
+                        (click)="changeSocketValue(2)">
+                        <span>2</span>
+                    </button>
+                    <button mat-fab color="primary" id="third-socket-button"
+                        [ngClass]="{'socket-button': selectedSocketId != 3, 'clicked-socket-button': selectedSocketId == 3}"
+                        (click)="changeSocketValue(3)">
+                        <span>3</span>
+                    </button>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="plugintype == 'vlc'">
+                <p id="vlc-label">Song ID:</p>
+                <input matInput placeholder="1" [(ngModel)]="songid" *ngIf="vlc_input_activated">
+                <mat-slide-toggle #turnonslider (change)="turnOnSliderClicked(turnonslider.checked)">Stop
+                </mat-slide-toggle>
+            </ng-container>
+        </div>
+        <div id="footer-div">
+            <button mat-flat-button id="save-button" (click)="saveActionWithParametersToGroup()">
+                <span>Save</span>
+            </button>
+            <button mat-flat-button id="cancel-button" (click)="cancelAction()">
+                <span>Cancel</span>
+            </button>
+        </div>
+    </div>
+</div>

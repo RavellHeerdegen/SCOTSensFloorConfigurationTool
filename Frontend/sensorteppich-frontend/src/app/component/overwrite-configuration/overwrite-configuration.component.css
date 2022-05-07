@@ -1,0 +1,99 @@
+.head-section {
+    margin-bottom: 3em;
+}
+
+.line {
+    width: 40px;
+    height: 9px;
+    background-color: #6472EA;
+}
+
+#content {
+    display: inline-grid;
+    display: -moz-inline-grid;
+}
+
+#help-button {
+    font-size: large;
+    color: #6472EA;
+    background: none;
+    border: 1px solid #6472EA;
+    height: 45px;
+    width: 45px;
+    transition: all 0.3s;
+}
+
+#help-button:hover {
+    color: white;
+    background: #6472EA;
+}
+
+::ng-deep  #help-button > .mat-button-wrapper > .material-icons {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-weight: bold;
+}
+
+.mat-fab:not([class*=mat-elevation-z]), .mat-mini-fab:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+::ng-deep .mat-mini-fab .mat-button-wrapper {
+    padding: 0px !important;
+}
+
+#overwrite-button {
+    color: white;
+    border-radius: 50px;
+    background-color: #6472EA;
+    padding: 0px 30px;
+    height: 45px;
+    font-size: 1em;
+    font-weight: 400;
+    width: 200px;
+    margin: 10vh 0px 8px 0px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#overwrite-button:hover {
+    background: rgb(81, 94, 209);
+}
+
+#cancel-button {
+    color: #6472EA;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid #6472EA;
+    padding: 0px 30px;
+    height: 45px;
+    font-size: 1em;
+    font-weight: 400;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#cancel-button:hover {
+    background: #6472EA;
+    color: white;
+}
+
+@media (max-width: 450px) {
+    #content {
+        display: grid;
+    }
+    #cancel-button, #overwrite-button {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 451px) {
+    #master-div {
+        height: inherit;
+        overflow: auto;
+    }
+    #background-div {
+        margin: 3em 13% 1.5em 13%;
+    }
+}

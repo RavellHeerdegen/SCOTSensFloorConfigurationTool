@@ -1,0 +1,20 @@
+<div id="master-div" [ngStyle]="styler.styleMaster()">
+    <div id="buttons-div">
+        <button mat-flat-button color="primary" id="add-devices-button" (click)="addDevices()"
+            [ngClass]="styler.buttonStyle()">
+            Add devices
+        </button>
+        <button mat-flat-button color="primary" id="change-devices-button" (click)="changeDevices()"
+            [ngClass]="styler.buttonStyle()">
+            Change devices
+        </button>
+        <button mat-flat-button color="primary" id="delete-button" (click)="deleteTiles()"
+            [ngClass]="styler.buttonStyle()">
+            Delete from group
+        </button>
+        <button mat-flat-button color="primary" id="back-button" (click)="navigateBackToHome()"
+            [ngClass]="styler.buttonStyle()">
+            Back
+        </button>
+    </div>
+</div>

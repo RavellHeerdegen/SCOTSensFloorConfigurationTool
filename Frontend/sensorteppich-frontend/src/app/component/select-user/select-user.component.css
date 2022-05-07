@@ -1,0 +1,98 @@
+#master-div {
+    height: 100% !important;
+    overflow: hidden;
+}
+
+#master-div > button {
+    width: 120px;
+}
+
+#logo {
+    width: 70%;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+#left-div {
+    float: left;
+    width: 32%;
+    color: white;
+    height: 100%;
+    padding-top: 15vH;
+    padding-left: 50px;
+    padding-right: 50px;
+    background: linear-gradient(135deg, rgba(100,114,234,1) 0%, rgba(100,191,195,1) 100%);
+}
+
+.head-section {
+    margin-bottom: 3em;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.line {
+    width: 40px;
+    height: 9px;
+    background-color: #6472EA;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button-area {
+    margin-bottom: 20px;
+}
+
+#elisabeth-button, #hans-button, #achim-button {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 7px;
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.3);
+}
+
+#elisabeth-button:hover, #hans-button:hover, #achim-button:hover {
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.1);
+    transform: translateY(1px); 
+  }
+
+@media (max-width: 460px) {
+    #left-div {
+        display: none;
+    }
+    #right-div {
+        display: table;
+        float: none;
+        width: 100%;
+    }
+    .content {
+        justify-content: space-between;
+    }
+    #elisabeth-button, #hans-button, #achim-button {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media (min-width: 461px) {
+    #master-div {
+        margin: 0px auto 0px auto !important;
+    }
+    .button-area {
+        margin-right: 25px;
+      }
+    #right-div {
+        width: auto;
+        padding-top: 15vH;
+        margin: auto;
+        display: table;
+    }
+}

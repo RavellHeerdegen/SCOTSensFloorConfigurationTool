@@ -1,0 +1,14 @@
+<h1 mat-dialog-title>Create new group</h1>
+<div mat-dialog-content>
+  <p>{{data.text}}</p>
+</div>
+<div id="create-group_div" *ngIf="data.additional_info_view == 'create_group'">
+  <mat-form-field class="example-full-width">
+    <mat-label>Groupname</mat-label>
+    <input matInput placeholder="New group" value="" maxlength="20" [(ngModel)]="additional_info_return" (keyup.enter)="onYesClick()">
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-flat-button (click)="onCancelClick()">Cancel</button>
+  <button mat-flat-button (click)="onYesClick()">Yes</button>
+</div>

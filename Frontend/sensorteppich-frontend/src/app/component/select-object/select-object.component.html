@@ -1,0 +1,30 @@
+<div id="master-div" [ngStyle]="styleMaster()">
+    <div id="background-div">
+        <div class="head-section">
+            <h2>Configure Group</h2>
+            <div class="line"></div>
+            <p>{{groupname}}</p>
+            <button id="help-button" mat-mini-fab (click)="helpButtonClicked()">
+                <mat-icon>?</mat-icon>
+            </button>
+            <h3>Step 2: Select the object you want to add.</h3>
+        </div>
+        <div id="objects-div">
+            <p>{{pluginFrontendName}}</p>
+            <div id="object-list">
+                <ng-container *ngFor="let object of objects">
+                    <button mat-flat-button
+                        [ngClass]="{'object-button': selectedObject != object.frontend_name, 'clicked-object-button': selectedObject == object.frontend_name}"
+                        (click)="selectObject(object.frontend_name)">
+                        <span>{{object.frontend_name}}</span>
+                    </button>
+                </ng-container>
+            </div>
+        </div>
+        <div id="cancel-div">
+            <button mat-flat-button id="cancel-button" (click)="cancelAction()">
+                <span>Back</span>
+            </button>
+        </div>
+    </div>
+</div>

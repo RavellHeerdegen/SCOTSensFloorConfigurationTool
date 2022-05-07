@@ -1,0 +1,99 @@
+plugins/tradfri/TradfriHelperTools.java
+ plugins.tradfri.TradfriHelperTools
+plugins/woehlkePlugin/DefaultHttpClient.java
+ plugins.woehlkePlugin.DefaultHttpClient
+app/exceptions/KeyNotFoundException.java
+ app.exceptions.KeyNotFoundException
+plugins/tradfri/LightBulb.java
+ plugins.tradfri.LightBulb
+app/Repositories/CarpetActionRepository.java
+ app.Repositories.CarpetActionRepository
+app/exceptions/ParameterException.java
+ app.exceptions.ParameterException
+app/exceptions/CarpetGroupNotFoundException.java
+ app.exceptions.CarpetGroupNotFoundException
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/AbstractHttpClientPlugin.java
+ Common.de.ableitner.barrierfreeSmarthome.common.plugin.AbstractHttpClientPlugin
+app/models/CarpetGroup.java
+ app.models.CarpetGroup
+ app.models.CarpetGroup$State
+plugins/tradfri/TradfriGatewayListener.java
+ plugins.tradfri.TradfriGatewayListener
+app/Repositories/CarpetConfigurationRepository.java
+ app.Repositories.CarpetConfigurationRepository
+app/exceptions/NoCarpetConfigurationLoadedException.java
+ app.exceptions.NoCarpetConfigurationLoadedException
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/AbstractPlugin.java
+ Common.de.ableitner.barrierfreeSmarthome.common.plugin.AbstractPlugin
+app/exceptions/CarpetActionNotFoundException.java
+ app.exceptions.CarpetActionNotFoundException
+plugins/tradfri/TradfriBulbListener.java
+ plugins.tradfri.TradfriBulbListener
+plugins/tradfri/TradfriPlugin.java
+ plugins.tradfri.TradfriPlugin
+app/exceptions/PluginByIdNotFoundException.java
+ app.exceptions.PluginByIdNotFoundException
+Common/de/ableitner/barrierfreeSmarthome/common/SharedAttribute.java
+ Common.de.ableitner.barrierfreeSmarthome.common.SharedAttribute
+plugins/tradfri/TradfriGateway.java
+ plugins.tradfri.TradfriGateway
+app/models/CarpetCoordinate.java
+ app.models.CarpetCoordinate
+plugins/tradfri/TradfriConstants.java
+ plugins.tradfri.TradfriConstants
+Common/de/ableitner/barrierfreeSmarthome/common/IHttpClient.java
+ Common.de.ableitner.barrierfreeSmarthome.common.IHttpClient
+Common/de/ableitner/barrierfreeSmarthome/common/BarrierfreeSmarthomeException.java
+ Common.de.ableitner.barrierfreeSmarthome.common.BarrierfreeSmarthomeException
+plugins/woehlkePlugin/WoehlkePlugin.java
+ plugins.woehlkePlugin.WoehlkePlugin
+plugins/philipsHue/PhilipsHuePlugin.java
+ plugins.philipsHue.PhilipsHuePlugin
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/IPluginObserver.java
+ Common.de.ableitner.barrierfreeSmarthome.common.plugin.IPluginObserver
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/DefaultPluginLoader.java
+ Common.de.ableitner.barrierfreeSmarthome.common.plugin.DefaultPluginLoader
+Common/de/ableitner/barrierfreeSmarthome/common/EmptyClass.java
+ Common.de.ableitner.barrierfreeSmarthome.common.EmptyClass
+app/services/JsonService.java
+ app.services.JsonService
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/IPlugin.java
+ Common.de.ableitner.barrierfreeSmarthome.common.plugin.IPlugin
+app/Repositories/CarpetGroupRepository.java
+ app.Repositories.CarpetGroupRepository
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/PluginApiVersionEnum.java
+ Common.de.ableitner.barrierfreeSmarthome.common.plugin.PluginApiVersionEnum
+plugins/woehlkePlugin/WoehlkeApiException.java
+ plugins.woehlkePlugin.WoehlkeApiException
+Common/de/ableitner/barrierfreeSmarthome/common/Checker.java
+ Common.de.ableitner.barrierfreeSmarthome.common.Checker
+app/exceptions/InvalidValueException.java
+ app.exceptions.InvalidValueException
+app/Application.java
+ app.Application
+ app.ApplicationStartup
+plugins/philipsHue/HttpClient.java
+ plugins.philipsHue.HttpClient
+Common/de/ableitner/barrierfreeSmarthome/common/plugin/IPluginV1.java
+ Common.de.ableitner.barrierfreeSmarthome.common.plugin.IPluginV1
+app/models/CarpetConfiguration.java
+ app.models.CarpetConfiguration
+app/models/CarpetAction.java
+ app.models.CarpetAction
+ app.models.CarpetAction$PluginNotSetException
+app/API_Controller.java
+ app.API_Controller
+app/CarpetConnector.java
+ app.CarpetConnector
+ app.CarpetConnector$1
+ app.CarpetConnector$2
+ app.CarpetConnector$3
+app/services/ConfigurationService.java
+ app.services.ConfigurationService
+ app.services.ConfigurationService$ActionType
+app/services/PluginService.java
+ app.services.PluginService
+app/services/TestService.java
+ app.services.TestService
+app/Carpet.java
+ app.Carpet

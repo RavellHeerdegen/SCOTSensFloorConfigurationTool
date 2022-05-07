@@ -1,0 +1,34 @@
+<div id="master-div" *ngIf="this.isLoading == false; else spinner">
+    <div id="left-div">
+        <img id="logo" src="./assets/icons/scot-logo-icon.png">
+        <div id="welcome-text">
+            <h3>Welcome to your SensFloor Configuration Tool. <br> Please select a user to get started.</h3>
+        </div>
+    </div>
+    <div id="right-div">
+        <div class="head-section">
+            <h2>Select User</h2>
+            <div class="line"></div>
+        </div>
+        <div class="content">
+            <div class="button-area">
+                <button mat-flat-button (click)="navigateByUsername('Elisabeth')"><img id="elisabeth-button"
+                        src="./assets/personas/Elisabeth.png" /></button>
+                <h3>Elisabeth</h3>
+            </div>
+            <div class="button-area">
+                <button mat-flat-button (click)="navigateByUsername('Hans')"><img id="hans-button"
+                        src="./assets/personas/Hans.png" /></button>
+                <h3>Hans</h3>
+            </div>
+            <div class="button-area">
+                <button mat-flat-button (click)="navigateByUsername('Achim')"><img id="achim-button"
+                        src="./assets/personas/Achim.png" /></button>
+                <h3>Achim</h3>
+            </div>
+        </div>
+    </div>
+</div>
+<ng-template #spinner>
+    <mat-spinner></mat-spinner>
+</ng-template>

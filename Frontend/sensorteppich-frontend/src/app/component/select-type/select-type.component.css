@@ -1,0 +1,119 @@
+.head-section {
+    margin-bottom: 3em;
+}
+
+.line {
+    width: 40px;
+    height: 9px;
+    background-color: #6472EA;
+}
+
+#plugins-div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+button {
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button-area {
+    margin-bottom: 20px;
+    max-width: 150px;
+}
+
+.big-buttons {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border: 1px solid #6472EA;
+    border-radius: 7px;
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.3);
+}
+
+.big-buttons:hover {
+    box-shadow: 0.2em 0.2em 0.5em rgba(0, 0, 0, 0.1);
+    transform: translateY(1px); 
+}
+
+#help-button {
+    font-size: large;
+    color: #6472EA;
+    background: none;
+    border: 1px solid #6472EA;
+    height: 45px;
+    width: 45px;
+    transition: all 0.3s;
+}
+
+#help-button:hover {
+    color: white;
+    background: #6472EA;
+}
+
+::ng-deep  #help-button > .mat-button-wrapper > .material-icons {
+    font-family: 'IBM Plex Sans', sans-serif !important;
+    font-weight: bold;
+}
+
+.mat-fab:not([class*=mat-elevation-z]), .mat-mini-fab:not([class*=mat-elevation-z]) {
+    box-shadow: none;
+}
+
+::ng-deep .mat-mini-fab .mat-button-wrapper {
+    padding: 0px !important;
+}
+
+#cancel-div {
+    display: flex;
+}
+
+#cancel-button {
+    color: #6472EA;
+    border-radius: 50px;
+    background-color: white;
+    border: 1px solid #6472EA;
+    padding: 0px 30px;
+    height: 45px;
+    font-size: 1em;
+    font-weight: 400;
+    margin: 15vh 0px 0px 0px;
+    width: 200px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#cancel-button:hover {
+    background: #6472EA;
+    color: white;
+}
+
+@media (max-width: 450px) {
+    #plugins-div {
+        justify-content: space-between;
+    }
+    #big-buttons {
+        height: 150px;
+        width: 150px;
+    }
+    #cancel-button {
+        margin: 6vh auto 0px auto;
+    }
+}
+
+@media (min-width: 451px) {
+    .button-area {
+        margin-right: 25px;
+      }
+    #master-div {
+        height: inherit;
+        overflow: auto;
+    }
+    #background-div {
+        margin: 3em 13% 1.5em 13%;
+    }
+}

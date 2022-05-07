@@ -1,0 +1,30 @@
+<div id="master-div" [ngStyle]="styleMaster()">
+    <div id="background-div">
+        <div class="head-section">
+            <h2>Configure Group</h2>
+            <div class="line"></div>
+            <p>{{groupname}}</p>
+            <button id="help-button" mat-mini-fab (click)="helpButtonClicked()">
+                <mat-icon>?</mat-icon>
+            </button>
+            <h3>Please select an action.</h3>
+        </div>
+        <div class="content">
+            <div class="button-area">
+                <button mat-flat-button (click)="changeConfiguration()"><img class="big-buttons"
+                        src="./assets/icons/change-configuration-icon.png" /></button>
+                <h3>Change configuration</h3>
+            </div>
+            <div class="button-area">
+                <button mat-flat-button (click)="overwriteConfiguration()"><img class="big-buttons"
+                        src="./assets/icons/overwrite-icon.png" /></button>
+                <h3>Overwrite configuration</h3>
+            </div>
+        </div>
+        <div id="cancel-div">
+            <button mat-flat-button id="cancel-button" (click)="cancelAction()">
+                <span>Cancel</span>
+            </button>
+        </div>
+    </div>
+</div>

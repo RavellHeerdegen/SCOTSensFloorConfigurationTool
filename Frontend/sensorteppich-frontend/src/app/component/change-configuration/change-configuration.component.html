@@ -1,0 +1,63 @@
+<div id="master-div" [ngStyle]="styleMaster()">
+    <div id="background-div">
+        <div class="head-section">
+            <h2>Configure Group</h2>
+            <div class="line"></div>
+            <p>{{groupname}}</p>
+            <button id="help-button" mat-mini-fab (click)="helpButtonClicked()">
+                <mat-icon>?</mat-icon>
+            </button>
+            <h3>Add, delete or change an object by clicking the list items or buttons.</h3>
+        </div>
+        <div class="content">
+            <div id="steps-choose-div">
+                <button mat-flat-button id="stepon-button"
+                    [ngClass]="{'stepper-button': stepon == false, 'clicked-stepper-button': stepon == true}"
+                    (click)="showStepOnActionsList()">
+                    <span>On Entry</span>
+                </button>
+                <button mat-flat-button id="stepoff-button"
+                    [ngClass]="{'stepper-button': stepon == true, 'clicked-stepper-button': stepon == false}"
+                    (click)="showStepOffActionsList()">
+                    <span>On Exit</span>
+                </button>
+            </div>
+            <div id="lists-div">
+                <div id="stepon-div" *ngIf="stepon">
+                    <!-- Check if stepon actions are available -->
+                    <mat-action-list>
+                        <button mat-list-item class="list-item" (click)="selectAction(action)"
+                            *ngFor="let action of steponactions"
+                            [ngClass]="{'selected-action': selectedAction == action, 'normal-action': selectedAction != action}">{{action.getActionName()}}
+                        </button>
+                    </mat-action-list>
+                </div>
+                <div id="stepoff-div" *ngIf="!stepon">
+                    <!-- Check if stepon actions are available -->
+                    <mat-action-list>
+                        <button mat-list-item class="list-item" (click)="selectAction(action)"
+                            *ngFor="let action of stepoffactions"
+                            [ngClass]="{'selected-action': selectedAction == action, 'normal-action': selectedAction != action}">{{action.getActionName()}}
+                        </button>
+                    </mat-action-list>
+                </div>
+            </div>
+            <div id="add-and-remove-buttons-div">
+                <button mat-mini-fab (click)="removeObject()">
+                    <mat-icon>remove</mat-icon>
+                </button>
+                <button mat-mini-fab (click)="changeObject()" *ngIf="selectedAction != null">
+                    <mat-icon>build</mat-icon>
+                </button>
+                <button mat-mini-fab (click)="addObject()">
+                    <mat-icon>add</mat-icon>
+                </button>
+            </div>
+        </div>
+        <div id="navigation-div">
+            <button mat-flat-button id="cancel-button" (click)="cancelAction()">
+                <span>Done</span>
+            </button>
+        </div>
+    </div>
+</div>

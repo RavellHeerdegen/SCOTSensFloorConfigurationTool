@@ -1,0 +1,50 @@
+<div id="master-div" [ngStyle]="styleMaster()">
+    <div id="background-div">
+        <div class="head-section">
+            <h2>Configure Group</h2>
+            <div class="line"></div>
+            <p>{{groupname}}</p>
+            <button id="help-button" mat-mini-fab (click)="helpButtonClicked()">
+                <mat-icon>?</mat-icon>
+            </button>
+            <h3>Step 1: Select the type of plugin you want to add.</h3>
+        </div>
+        <div id="plugins-div">
+            <ng-container *ngFor="let object of backendservice.getAvailableObjects()">
+                <ng-container *ngIf="object.pluginId == 'hue_light'">
+                    <div class="button-area">
+                        <button mat-flat-button (click)="selectObject('hue_light')"><img class="big-buttons"
+                                src="./assets/icons/bulb-icon.png" /></button>
+                        <h3>Philips HUE</h3>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="object.pluginId == 'tradfri_light'">
+                    <div class="button-area">
+                        <button mat-flat-button (click)="selectObject('tradfri_light')"><img class="big-buttons"
+                                src="./assets/icons/bulb-icon.png" /></button>
+                        <h3>Ikea TRADFRI</h3>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="object.pluginId == 'woehlke'">
+                    <div class="button-area">
+                        <button mat-flat-button id="socket-button" (click)="selectObject('woehlke')"><img
+                                class="big-buttons" src="./assets/icons/plug-icon.png" /></button>
+                        <h3>Smart Socket</h3>
+                    </div>
+                </ng-container>
+                <ng-container *ngIf="object.pluginId == 'vlc'">
+                    <div class="button-area">
+                        <button mat-flat-button id="vlc-button" (click)="selectObject('vlc')"><img class="big-buttons"
+                                src="./assets/icons/vlc-icon.png" /></button>
+                        <h3>VLC</h3>
+                    </div>
+                </ng-container>
+            </ng-container>
+        </div>
+        <div id="cancel-div">
+            <button mat-flat-button id="cancel-button" (click)="cancelAction()">
+                <span>Back</span>
+            </button>
+        </div>
+    </div>
+</div>
